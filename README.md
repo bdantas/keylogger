@@ -2,7 +2,8 @@
 A minimalistic keylogger for UNIX-like operating systems running X
 
 # Requirements
-- UNIX-like operating system (GNU/Linux or BSD) running X, *xinput*, *xmodmap*
+- UNIX-like operating system (GNU/Linux or BSD) running X
+- *xinput* and *xmodmap*
 
 # Installation
 ```
