@@ -1,5 +1,5 @@
 # keylogger
-A minimalistic keylogger for UNIX-like operating systems running X
+Minimalistic keylogger for UNIX-like operating systems running X
 
 # Requirements
 - UNIX-like operating system (GNU/Linux or BSD) running X
