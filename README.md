@@ -13,7 +13,7 @@ $ unzip master.zip
 $ sudo cp ./keylogger-master/keylogger /usr/local/bin/keylogger
 $ sudo chmod a+x /usr/local/bin/keylogger
 ```
-Notu: If your operating system is not Debian-like, adjust the first step
+Note: If your operating system is not Debian-like, adjust the first step
 
 # Usage
 `$ keylogger`
