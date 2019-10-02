@@ -1,8 +1,8 @@
 # keylogger
-Minimalistic keylogger for UNIX-like operating systems running X
+Minimalistic keylogger for UNIX-like operating systems
 
 # Requirements
-- UNIX-like operating system (GNU/Linux or BSD) running X
+- UNIX-like operating system (GNU/Linux or BSD) running X window system
 - *xinput* and *xmodmap*
 
 # Installation
