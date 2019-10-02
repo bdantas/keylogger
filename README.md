@@ -1,10 +1,10 @@
 # keylogger
 A minimalistic keylogger for UNIX-like operating systems running X
 
-# Requirements:
+# Requirements
 - UNIX-like operating system (GNU/Linux or BSD) running X, *xinput*, *xmodmap*
 
-# Installation:
+# Installation
 ```
 $ sudo apt install xinput x11-xserver-utils
 $ cd /tmp
@@ -15,5 +15,5 @@ $ sudo chmod a+x /usr/local/bin/keylogger
 ```
 Notu: If your operating system is not Debian-like, adjust the first step
 
-# Usage:
+# Usage
 `$ keylogger`
