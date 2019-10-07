@@ -21,7 +21,6 @@ build_array() # actually just a series of variables (e.g., map_38=a map_39=s map
 
 monitor_keyboard()
 {
-	prior_key=''
 	LANG=C xinput --test-xi2 --root | awk '
 /RawKeyPress/ { relevant=1 }
 relevant==1 && /detail/ { print $2; relevant=0 }
