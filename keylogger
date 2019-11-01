@@ -27,7 +27,7 @@ relevant==1 && /detail/ { print $2; relevant=0 }
 { fflush() }
 ' | while read keycode; do
 		key=$(eval echo \$map_$keycode)
-		echo "$key"
+		printf "$key"
 	done
 }
 
