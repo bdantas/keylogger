@@ -11,7 +11,7 @@ $ sudo apt install xinput x11-xserver-utils
 $ cd /tmp
 $ wget https://github.com/bdantas/keylogger/archive/master.zip
 $ unzip master.zip
-$ sudo cp ./keylogger-master/keylogger /usr/local/bin/keylogger
+$ sudo cp ./keylogger-master/keylogger /usr/local/bin/
 $ sudo chmod a+x /usr/local/bin/keylogger
 ```
 Note: If your operating system is not Debian-like, adjust the first step
